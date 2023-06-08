@@ -2,9 +2,11 @@ import { createContext, useState } from "react";
 
 export const TokenContext = createContext();
 
-export const TokenProvider = () => {
+export const TokenProvider = ({ children }) => {
   const [token, setToken] = useState("");
   return (
-    <TokenContext.Provider value={{ token, setToken }}></TokenContext.Provider>
+    <TokenContext.Provider value={{ token, setToken }}>
+      {children}
+    </TokenContext.Provider>
   );
 };
