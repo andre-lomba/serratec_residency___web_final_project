@@ -4,10 +4,18 @@ import App from "./App.jsx";
 import "./index.css";
 import { TokenProvider } from "./context/TokenContext.jsx";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [],
+  },
+]);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <TokenProvider>
-      <App />
+      <RouterProvider router={router} />
     </TokenProvider>
   </React.StrictMode>
 );
