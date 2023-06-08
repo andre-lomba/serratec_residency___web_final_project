@@ -1,14 +1,14 @@
 import { useContext, useEffect } from "react";
-import { TokenContext } from "./context/TokenContext";
+import { UserContext } from "./context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 function App() {
-  const { token } = useContext(TokenContext);
+  const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (token) navigate("/home");
+      if (user) navigate("/home");
       else navigate("/login");
     }, 1500);
     return () => clearTimeout(timer);

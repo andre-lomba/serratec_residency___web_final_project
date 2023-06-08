@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { TokenContext } from "./context/TokenContext";
+import { UserContext } from "./context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const { token, setToken } = useContext(TokenContext);
+  const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (token) navigate("/");
+    if (user) navigate("/");
   }, []);
   return <></>;
 }

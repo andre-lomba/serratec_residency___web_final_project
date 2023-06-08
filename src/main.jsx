@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import { TokenProvider } from "./context/TokenContext.jsx";
+import { UserProvider } from "./context/UserContext.jsx";
 import { ProdutoProvider } from "./context/ProdutoContext.jsx";
 import { CarrinhoProvider } from "./context/CarrinhoContext.jsx";
 import Home from "./pages/Home.jsx";
@@ -46,12 +46,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <TokenProvider>
+    <UserProvider>
       <ProdutoProvider>
         <CarrinhoProvider>
           <RouterProvider router={router} />
         </CarrinhoProvider>
       </ProdutoProvider>
-    </TokenProvider>
+    </UserProvider>
   </React.StrictMode>
 );

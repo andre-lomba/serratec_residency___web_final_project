@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { TokenContext } from "./context/TokenContext";
+import { UserContext } from "./context/UserContext";
 
 function Carrinho() {
-  const { token, setToken } = useContext(TokenContext);
+  const { user, setUser } = useContext(UserContext);
   return <></>;
 }
 

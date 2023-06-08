@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { TokenContext } from "./context/TokenContext";
+import { UserContext } from "./context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 function Cadastro() {
-  const { token, setToken } = useContext(TokenContext);
+  const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (token) navigate("/");
+    if (user) navigate("/");
   }, []);
   return <></>;
 }
