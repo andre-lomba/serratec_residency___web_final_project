@@ -3,20 +3,22 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { UserProvider } from "./context/UserContext.jsx";
-import { ProdutoProvider } from "./context/ProdutoContext.jsx";
+import { ProdutosProvider } from "./context/ProdutosContext.jsx";
 import { CarrinhoProvider } from "./context/CarrinhoContext.jsx";
+import { PesquisaProvider } from "./context/PesquisaContext.jsx";
 import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Cadastro from "./pages/Cadastro.jsx";
 import Carrinho from "./pages/Carrinho.jsx";
 import PedidoFeito from "./pages/PedidoFeito.jsx";
 import Produto from "./pages/Produto.jsx";
-import { RouterProvider } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <h1>404 PÁGINA NÃO ENCONTRADA</h1>,
   },
   {
     path: "/home",
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/create",
+    path: "/register",
     element: <Cadastro />,
   },
   {
@@ -47,11 +49,13 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <UserProvider>
-      <ProdutoProvider>
-        <CarrinhoProvider>
-          <RouterProvider router={router} />
-        </CarrinhoProvider>
-      </ProdutoProvider>
+      <ProdutosProvider>
+        <PesquisaProvider>
+          <CarrinhoProvider>
+            <RouterProvider router={router} />
+          </CarrinhoProvider>
+        </PesquisaProvider>
+      </ProdutosProvider>
     </UserProvider>
   </React.StrictMode>
 );

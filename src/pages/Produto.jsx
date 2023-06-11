@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { UserContext } from "./context/UserContext";
+import { useContext, useEffect } from "react";
+import { UserContext } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 function Produto() {
@@ -7,7 +7,7 @@ function Produto() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!user) navigate("/");
+    if (!user.email) navigate("/");
   }, []);
   return <></>;
 }

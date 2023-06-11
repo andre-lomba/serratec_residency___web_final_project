@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { UserContext } from "./context/UserContext";
+import { useContext, useEffect } from "react";
+import { UserContext } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 function PedidoFeito() {
@@ -7,9 +7,13 @@ function PedidoFeito() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!user) navigate("/");
+    if (!user.email) navigate("/");
   }, []);
-  return <></>;
+  return (
+    <>
+    
+   </>
+  )
 }
 
 export default PedidoFeito;
