@@ -12,7 +12,7 @@ function App() {
       const user = localStorage.getItem("user");
       if (user) navigate("/home");
       else navigate("/login");
-    }, 1800);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
   return (

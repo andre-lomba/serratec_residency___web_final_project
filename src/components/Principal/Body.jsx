@@ -38,6 +38,16 @@ export default function Body() {
     backgroundColor: `${COLORS.orange}`,
   };
 
+  const div = {
+    width: "100%",
+    height: "70vh",
+    backgroundColor: "red",
+    borderBottomLeftRadius: "30px",
+    borderBottomRightRadius: "30px",
+    backgroundColor: `${COLORS.offWhite}`,
+    boxShadow: "0px 19px 13px -14px rgba(0, 0, 0, 0.25)",
+  };
+
   return (
     <Box sx={{ width: "100vw", display: "flex", justifyContent: "center" }}>
       <Box sx={{ width: "100%", margin: "1rem" }}>
@@ -60,14 +70,7 @@ export default function Body() {
           <LinkTab style={tab} label="Histórico" />
         </Tabs>
 
-        <Box
-          sx={{
-            width: "100%",
-            backgroundColor: "red",
-          }}
-        >
-          TESTE
-        </Box>
+        <Box sx={div}>TESTE</Box>
       </Box>
     </Box>
   );

@@ -11,24 +11,34 @@ function Home() {
   const navigate = useNavigate();
   const { produtos, setProdutos } = useContext(ProdutosContext);
   const [loading, setLoading] = useState(true);
+  const user = localStorage.getItem("user");
+  const search = localStorage.getItem("search");
 
   useEffect(() => {
-    const getLivros = async () => {
-      const user = localStorage.getItem("user");
-      if (!user) {
-        navigate("/");
-      } else {
-        try {
-          const response = await api.get("/produtos");
-          setProdutos(response.data);
-          setLoading(false);
-        } catch (error) {
-          console.log(error);
-        }
-      }
-    };
-    getLivros();
-  }, []);
+    if (!user) {
+      navigate("/");
+    } else if (search) {
+      setProdutos(JSON.parse(search));
+      localStorage.removeItem("search");
+      setLoading(false);
+    } else {
+      getLivros();
+    }
+  }, [navigate]);
+
+  const getLivros = async () => {
+    try {
+      const response = await api.get("/produtos");
+      setProdutos(response.data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (loading === false) console.log(produtos);
+  }, [produtos]);
 
   if (loading) {
     return <div></div>;
@@ -41,7 +51,7 @@ function Home() {
           backgroundColor: `${COLORS.background}`,
         }}
       >
-        <Header />
+        <Header currentPage={"/home"} />
         <Body />
       </div>
     );

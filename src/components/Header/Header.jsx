@@ -47,7 +47,7 @@ const Lupa = styled.i`
   }
 `;
 
-const Header = () => {
+const Header = ({ currentPage }) => {
   const navigate = useNavigate();
   const [input, setInput] = useState("");
   const { produtos, setProdutos } = useContext(ProdutosContext);
@@ -68,10 +68,17 @@ const Header = () => {
   const handleClickLupa = async () => {
     const response = await api.get("/produtos");
     const inputSearch = input.toLowerCase().trim();
-    const resultado = response.data.filter((livro) =>
-      livro.titulo.toLowerCase().includes(inputSearch)
+    const resultado = response.data.filter(
+      (livro) =>
+        livro.titulo.toLowerCase().includes(inputSearch) ||
+        livro.autor.toLowerCase().includes(inputSearch)
     );
-    setProdutos([resultado]);
+    localStorage.setItem("search", JSON.stringify(resultado));
+    setInput("");
+    if (currentPage === "/home") {
+      setProdutos(resultado);
+      localStorage.removeItem("search");
+    } else navigate("/home");
   };
 
   const estilo = {
