@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useNavigate } from "react-router-dom";
 
 const DivLivro = styled.div`
   display: flex;
@@ -22,9 +23,19 @@ const Capa = styled.img`
 `;
 
 const Produto = ({ livro }) => {
+  const navigate = useNavigate();
+
+  const handleClickLivro = (id) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <DivLivro>
-      <Capa src={livro.imagem} alt={livro.nome} />
+      <Capa
+        onClick={() => handleClickLivro(livro.id)}
+        src={livro.imagem}
+        alt={livro.nome}
+      />
       <div style={{ display: "flex" }}>
         <h4 style={{ margin: "0", width: "max-content" }}>
           {livro.titulo}{" "}

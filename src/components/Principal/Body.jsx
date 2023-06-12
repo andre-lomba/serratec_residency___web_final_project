@@ -53,7 +53,7 @@ export default function Body() {
 
         <Box id="123" sx={div}>
           {produtos.map((livro, index) => (
-              <Produto livro={livro} key={index} />
+            <Produto livro={livro} key={index} />
           ))}
         </Box>
       </Box>

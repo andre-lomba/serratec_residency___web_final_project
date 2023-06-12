@@ -24,7 +24,7 @@ function ProdutoPage() {
         backgroundColor: `${COLORS.background}`,
       }}
     >
-      {/* <Header currentPage={"/product/:id"} /> */}
+      <Header currentPage={"/product/:id"} />
       <produtoStyle />
     </div>
   );
