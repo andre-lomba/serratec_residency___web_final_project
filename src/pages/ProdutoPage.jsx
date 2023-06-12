@@ -3,17 +3,18 @@ import { UserContext } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import { COLORS } from "../components/BaseComponents/Color";
 import Header from "../components/Header/Header";
+import produtoStyle from "../components/Principal/produtoStyle";
 
-function Produto() {
+function ProdutoPage() {
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
     const user = localStorage.getItem("user");
     const search = localStorage.getItem("search");
-    if (!user) {
-      navigate("/");
-    }
+    //if (!user) {
+    //   navigate("/");
+    //  }
   }, []);
   return (
     <div
@@ -23,9 +24,10 @@ function Produto() {
         backgroundColor: `${COLORS.background}`,
       }}
     >
-      <Header currentPage={"/product/:id"} />
+      {/* <Header currentPage={"/product/:id"} /> */}
+      <produtoStyle />
     </div>
   );
 }
 
-export default Produto;
+export default ProdutoPage;

@@ -15,9 +15,9 @@ function Home() {
   const search = localStorage.getItem("search");
 
   useEffect(() => {
-    if (!user) {
-      navigate("/");
-    } else if (search) {
+    // if (!user) {
+    //   navigate("/");
+    /*} else*/ if (search) {
       setProdutos(JSON.parse(search));
       localStorage.removeItem("search");
       setLoading(false);

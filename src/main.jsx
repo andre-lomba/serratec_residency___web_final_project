@@ -6,13 +6,14 @@ import { UserProvider } from "./context/UserContext.jsx";
 import { ProdutosProvider } from "./context/ProdutosContext.jsx";
 import { CarrinhoProvider } from "./context/CarrinhoContext.jsx";
 import { PesquisaProvider } from "./context/PesquisaContext.jsx";
+import { ClickProvider } from "./context/ClickContext.jsx";
 import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Cadastro from "./pages/Cadastro.jsx";
 import Carrinho from "./pages/Carrinho.jsx";
 import PedidoFeito from "./pages/PedidoFeito.jsx";
-import Produto from "./pages/Produto.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import ProdutoPage from "./pages/ProdutoPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,20 +43,22 @@ const router = createBrowserRouter([
   },
   {
     path: "/product/:id",
-    element: <Produto />,
+    element: <ProdutoPage />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <UserProvider>
-      <ProdutosProvider>
-        <PesquisaProvider>
-          <CarrinhoProvider>
-            <RouterProvider router={router} />
-          </CarrinhoProvider>
-        </PesquisaProvider>
-      </ProdutosProvider>
+      <ClickProvider>
+        <ProdutosProvider>
+          <PesquisaProvider>
+            <CarrinhoProvider>
+              <RouterProvider router={router} />
+            </CarrinhoProvider>
+          </PesquisaProvider>
+        </ProdutosProvider>
+      </ClickProvider>
     </UserProvider>
   </React.StrictMode>
 );

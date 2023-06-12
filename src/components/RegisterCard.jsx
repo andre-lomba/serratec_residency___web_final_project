@@ -100,6 +100,7 @@ const RegisterCard = () => {
           nome: nome,
           email: email,
           password: senha,
+          carrinho: [],
         });
         console.log(response);
         setMsgColor("green");
