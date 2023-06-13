@@ -1,31 +1,51 @@
-import { useContext, useEffect } from "react";
-import { UserContext } from "../context/UserContext";
-import { useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { COLORS } from "../components/BaseComponents/Color";
 import Header from "../components/Header/Header";
-import produtoStyle from "../components/Principal/produtoStyle";
+import BodyProduto from "../components/Principal/BodyProduto";
+import api from "../api/api";
+import { ProdutoContext } from "../context/ProdutoContext";
 
 function ProdutoPage() {
-  const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
+  const { id } = useParams();
+  const { produto, setProduto } = useContext(ProdutoContext);
 
   useEffect(() => {
     const user = localStorage.getItem("user");
-    const search = localStorage.getItem("search");
-    //if (!user) {
-    //   navigate("/");
-    //  }
+    if (!user) {
+      navigate("/");
+    } else {
+      getLivro();
+    }
   }, []);
+
+  const getLivro = async () => {
+    try {
+      const response = await api.get(`/produtos/${id}`);
+      if (response.data.quantidade === 0) {
+        navigate("/home");
+      }
+      setProduto(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div
       style={{
-        height: "100vh",
-        width: "100vw",
         backgroundColor: `${COLORS.background}`,
+        minHeight: "100vh",
+        maxHeight: "100%",
+        width: "100%",
+        overflowY: "hidden",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
     >
       <Header currentPage={"/product/:id"} />
-      <produtoStyle />
+      <BodyProduto />
     </div>
   );
 }

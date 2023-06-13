@@ -15,14 +15,15 @@ function Home() {
   const search = localStorage.getItem("search");
 
   useEffect(() => {
-    // if (!user) {
-    //   navigate("/");
-    /*} else*/ if (search) {
+    if (!user) {
+      navigate("/");
+    } else if (search) {
       setProdutos(JSON.parse(search));
       localStorage.removeItem("search");
       setLoading(false);
     } else {
       getLivros();
+      setLoading(false);
     }
   }, [navigate]);
 
@@ -36,23 +37,28 @@ function Home() {
     }
   };
 
-  useEffect(() => {
-    if (loading === false) console.log(produtos);
-  }, [produtos]);
-
   if (loading) {
     return <div></div>;
   } else {
     return (
       <div
         style={{
-          height: "100vh",
-          width: "100vw",
           backgroundColor: `${COLORS.background}`,
+          minHeight: "100vh",
+          maxHeight: "100%",
+          width: "100%",
+          display: "flex",
         }}
       >
-        <Header currentPage={"/home"} />
-        <Body />
+        <div
+          style={{
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <Header currentPage={"/home"} />
+          <Body />
+        </div>
       </div>
     );
   }

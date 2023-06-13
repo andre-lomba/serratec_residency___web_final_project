@@ -8,8 +8,11 @@ import { Logo } from "../Logos/Logo";
 import { styled } from "styled-components";
 import { ProdutosContext } from "../../context/ProdutosContext";
 import api from "../../api/api";
-import Popper from "@mui/material/Popper";
 import { CarrinhoContext } from "../../context/CarrinhoContext";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import _ from "lodash";
+import { UserContext } from "../../context/UserContext";
 
 const Pesquisa = styled.input`
   margin-left: 0.5rem;
@@ -65,7 +68,7 @@ const BotaoSair = styled.button`
   background-color: ${COLORS.orange};
   border: none;
   border-radius: 5px;
-  width: 100%;
+  width: 80%;
   &:hover {
     opacity: 0.8;
     cursor: pointer;
@@ -94,36 +97,88 @@ const Contador = styled.div`
   height: 20px;
 `;
 
+const estilo = {
+  backgroundColor: `${COLORS.offWhite}`,
+  boxShadow: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyItems: "space-between",
+};
+
+const estiloLogo = {
+  width: "3rem",
+};
+
+const estiloToolBar = {
+  minHeight: "64px",
+  width: "96%",
+  display: "flex",
+  justifyContent: "space-between",
+};
+
+const estiloModal = {
+  position: "absolute",
+  top: "110px",
+  left: "92%",
+  transform: "translate(-50%, -50%)",
+  border: "none",
+  borderRadius: "10px",
+  p: 1,
+  bgcolor: `${COLORS.white}`,
+  display: "grid",
+  placeItems: "center",
+  textAlign: "center",
+  gridGap: "5px",
+  boxShadow: 24,
+  p: 1.5,
+};
+
 const Header = ({ currentPage }) => {
   const navigate = useNavigate();
   const [input, setInput] = useState("");
   const { carrinho, setCarrinho } = useContext(CarrinhoContext);
   const { produtos, setProdutos } = useContext(ProdutosContext);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const user = JSON.parse(localStorage.getItem("user"));
-  const nome = user.user.nome;
-  const email = user.user.email;
-  const userId = user.user.id;
+  const { user, setUser } = useContext(UserContext);
+  const [open, setOpen] = React.useState(false);
+  const [loading, setLoading] = useState(true);
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [qtdProduto, setQtdProduto] = useState(0);
+
+  const usuario = JSON.parse(localStorage.getItem("user")).user;
+  const userId = usuario.id;
 
   useEffect(() => {
     getUser();
-  }, []);
+    let qtdTransf = 0;
+    carrinho.forEach((item) => {
+      qtdTransf += item.quantidade;
+    });
+    setQtdProduto(qtdTransf);
+  }, [carrinho]);
+
+  useEffect(() => {
+    if (loading) {
+      setLoading(false);
+    } else {
+      setNome(user.nome);
+      setEmail(user.email);
+    }
+  }, [user]);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const getUser = async () => {
     try {
       const response = await api.get(`/users/${userId}`);
-      setCarrinho(response.data.carrinho);
+      setUser(response.data);
+      const isEqualArrays = _.isEqual(response.data.carrinho, carrinho);
+      if (!isEqualArrays) setCarrinho(response.data.carrinho);
     } catch (error) {
       console.log(error);
     }
   };
-
-  const handleClickUser = (event) => {
-    setAnchorEl(anchorEl ? null : event.currentTarget);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popper" : undefined;
 
   const handleChangeInput = (e) => {
     setInput(e.target.value);
@@ -164,120 +219,102 @@ const Header = ({ currentPage }) => {
     } else navigate("/home");
   };
 
-  const estilo = {
-    backgroundColor: `${COLORS.offWhite}`,
-    boxShadow: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyItems: "space-between",
-  };
-
-  const estiloLogo = {
-    width: "3rem",
-  };
-
-  const estiloToolBar = {
-    minHeight: "64px",
-    width: "96%",
-    display: "flex",
-    justifyContent: "space-between",
-  };
-
-  return (
-    <Box sx={{ flexGrow: 1, width: "100vw" }}>
-      <AppBar position="static" style={estilo}>
-        <Toolbar sx={estiloToolBar}>
-          <Box
-            sx={{
-              width: "12%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-              cursor: "pointer",
-            }}
-            onClick={handleClickLogo}
-          >
-            <img style={estiloLogo} src={Logo} alt="logomarca" />
-            <h3 style={{ fontFamily: "Alatsi", color: `${COLORS.black}` }}>
-              SUMMARKET
-            </h3>
-          </Box>
-          <Box
-            sx={{
-              height: "2rem",
-              width: "40%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: `${COLORS.lightGrey}`,
-              borderRadius: "20px",
-            }}
-          >
-            <Pesquisa
-              onChange={handleChangeInput}
-              value={input}
-              type="text"
-              placeholder="O que está procurando?"
-            />
-            <Lupa onClick={handleClickLupa} className="fa fa-search"></Lupa>
-          </Box>
-          <Box
-            sx={{
-              width: "10%",
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <DivCarrinhoContador onClick={handleClickBasket}>
-              {carrinho.length > 0 ? (
-                <Contador>{carrinho.length}</Contador>
-              ) : null}
-              <Basket className="fa fa-shopping-basket"></Basket>
-            </DivCarrinhoContador>
-
-            <User
-              className="fa fa-user-circle-o"
-              aria-describedby={id}
-              onClick={handleClickUser}
-            ></User>
-            <Popper id={id} open={open} anchorEl={anchorEl}>
-              <Box
-                sx={{
-                  border: 1,
-                  p: 1,
-                  bgcolor: `${COLORS.offWhite}`,
-                  display: "grid",
-                  placeItems: "center",
-                  textAlign: "center",
-                  gridGap: "5px",
-                }}
-              >
-                <h5
-                  style={{
-                    color: `${COLORS.deepGrey}`,
-                    margin: "0",
-                    fontFamily: "Alatsi",
-                  }}
+  if (loading) {
+    return <></>;
+  } else {
+    return (
+      <Box sx={{ flexGrow: 1, width: "100vw" }}>
+        <AppBar position="static" style={estilo}>
+          <Toolbar sx={estiloToolBar}>
+            <Box
+              sx={{
+                width: "12%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-evenly",
+                cursor: "pointer",
+              }}
+              onClick={handleClickLogo}
+            >
+              <img style={estiloLogo} src={Logo} alt="logomarca" />
+              <h3 style={{ fontFamily: "Alatsi", color: `${COLORS.black}` }}>
+                SUMMARKET
+              </h3>
+            </Box>
+            <Box
+              sx={{
+                height: "2rem",
+                width: "40%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: `${COLORS.lightGrey}`,
+                borderRadius: "20px",
+              }}
+            >
+              <Pesquisa
+                onChange={handleChangeInput}
+                value={input}
+                type="text"
+                placeholder="O que está procurando?"
+              />
+              <Lupa onClick={handleClickLupa} className="fa fa-search"></Lupa>
+            </Box>
+            <Box
+              sx={{
+                width: "10%",
+                display: "flex",
+                justifyContent: "space-evenly",
+              }}
+            >
+              <DivCarrinhoContador onClick={handleClickBasket}>
+                {carrinho.length > 0 ? <Contador>{qtdProduto}</Contador> : null}
+                <Basket className="fa fa-shopping-basket"></Basket>
+              </DivCarrinhoContador>
+              <div style={{ display: "block" }}>
+                <User
+                  className="fa fa-user-circle-o"
+                  onClick={handleOpen}
+                ></User>
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
                 >
-                  {nome}
-                </h5>
-                <h6
-                  style={{
-                    color: `${COLORS.deepGrey}`,
-                    margin: "0",
-                    fontFamily: "Alatsi",
-                  }}
-                >
-                  {email}
-                </h6>
-                <BotaoSair onClick={handleClickSair}>SAIR</BotaoSair>
-              </Box>
-            </Popper>
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
+                  <Box sx={estiloModal}>
+                    <Typography
+                      id="modal-modal-title"
+                      variant="h6"
+                      component="h2"
+                      sx={{
+                        color: `${COLORS.deepGrey}`,
+                        margin: "0",
+                        fontFamily: "Alatsi",
+                      }}
+                    >
+                      {nome}{" "}
+                      <Typography
+                        id="modal-modal-description"
+                        sx={{
+                          color: `${COLORS.deepGrey}`,
+                          margin: "0",
+                          fontFamily: "Alatsi",
+                        }}
+                      >
+                        {email}
+                      </Typography>
+                    </Typography>
+                    <BotaoSair onClick={handleClickSair}>SAIR</BotaoSair>
+                  </Box>
+                </Modal>
+              </div>
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    );
+  }
 };
 
 export default Header;

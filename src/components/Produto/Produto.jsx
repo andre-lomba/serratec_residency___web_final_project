@@ -6,13 +6,16 @@ const DivLivro = styled.div`
   flex-direction: column;
   font-family: "Alatsi";
   justify-content: center;
+  align-items: center;
+  text-align: -webkit-center;
   min-width: 40px;
   max-width: 100%;
+  margin: 5%;
 `;
 
 const Capa = styled.img`
   min-width: 50px;
-  max-width: 100%;
+  max-width: 90%;
   border: 0.1px solid black;
 
   &:hover {
@@ -22,6 +25,16 @@ const Capa = styled.img`
   }
 `;
 
+const Titulo = styled.h4`
+  margin: 0;
+  width: max-content;
+`;
+
+const Autor = styled.h5`
+  margin: 0;
+  width: max-content;
+`;
+
 const Produto = ({ livro }) => {
   const navigate = useNavigate();
 
@@ -29,21 +42,26 @@ const Produto = ({ livro }) => {
     navigate(`/product/${id}`);
   };
 
-  return (
-    <DivLivro>
-      <Capa
-        onClick={() => handleClickLivro(livro.id)}
-        src={livro.imagem}
-        alt={livro.nome}
-      />
-      <div style={{ display: "flex" }}>
-        <h4 style={{ margin: "0", width: "max-content" }}>
-          {livro.titulo}{" "}
-          <h5 style={{ margin: "0", width: "max-content" }}>{livro.autor}</h5>
-        </h4>
-      </div>
-    </DivLivro>
-  );
+  if (livro.quantidade > 0)
+    return (
+      <DivLivro>
+        <Capa
+          onClick={() => handleClickLivro(livro.id)}
+          src={livro.imagem}
+          alt={livro.nome}
+        />
+        <div
+          style={{
+            display: "block",
+            width: "100%",
+          }}
+        >
+          <Titulo>{livro.titulo}</Titulo>
+          <Autor>{livro.autor}</Autor>
+        </div>
+      </DivLivro>
+    );
+  else null;
 };
 
 export default Produto;
