@@ -1,0 +1,612 @@
+{
+  "users": [
+    {
+      "email": "raphaelrochap@gmail.com",
+      "password": "$2a$10$SBSfree4ybtT64HIPDWcl.TV2dx2RwuWA8203QjMTWj2QSnxtBvYC",
+      "nome": "Raphael Rocha",
+      "id": 1,
+      "carrinho": [],
+      "avaliacoes": []
+    },
+    {
+      "email": "andrelombagr@gmail.com",
+      "password": "$2a$10$19HXRnq.OjNxioISSsT8/uv4RUsEhPyrGNVFuGptyllrrkcBXzvWu",
+      "nome": "André Lomba",
+      "id": 2,
+      "carrinho": [],
+      "avaliacoes": []
+    },
+    {
+      "email": "userteste@gmail.com",
+      "password": "$2a$10$eBojt/uA4TcZ4Tw6dvTRweAildpRaWqtznibinh4WamvmP8cgDNai",
+      "nome": "User Teste",
+      "id": 3,
+      "carrinho": [],
+      "avaliacoes": []
+    },
+    {
+      "email": "andrelomba@hotmail.com",
+      "password": "$2a$10$vGP3aAALLaHpI25Y0yI/l.zh5cBLhS2k3jSI57JMjgFwATL7PUW5S",
+      "nome": "André Lomba",
+      "carrinho": [],
+      "avaliacoes": [
+        {
+          "idProduto": 4,
+          "avaliacao": 1
+        },
+        {
+          "idProduto": 1,
+          "avaliacao": 0
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "produtos": [
+    {
+      "titulo": "É Assim Que Acaba",
+      "autor": "Colleen Hoover",
+      "isbn": "8501112518",
+      "editora": "Galera",
+      "publicacao": "18 de janeiro de 2018",
+      "nacionalidade": "Estadunidense",
+      "paginas": 368,
+      "preco": 34.1,
+      "quantidade": 56,
+      "descricao": "Considerado o livro do ano, que virou febre no TikTok e sozinho já acumulou mais de um milhão de exemplares vendidos no Brasil. É assim que acaba é o romance mais pessoal da carreira de Colleen Hoover, discutindo temas como violência doméstica e abuso psicológico de forma sensível e direta.\n\nEm É assim que acaba, Colleen Hoover nos apresenta Lily, uma jovem que se mudou de uma cidadezinha do Maine para Boston, se formou em marketing e abriu a própria floricultura. E é em um dos terraços de Boston que ela conhece Ryle, um neurocirurgião confiante, teimoso e talvez até um pouco arrogante, com uma grande aversão a relacionamentos, mas que se sente muito atraído por ela.\n\nQuando os dois se apaixonam, Lily se vê no meio de um relacionamento turbulento que não é o que ela esperava. Mas será que ela conseguirá enxergar isso, por mais doloroso que seja?",
+      "genero": "Romance",
+      "imagem": "https://artistic-seashore-23a.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb6654a40-18e3-462a-9e57-6927e477412b%2FUntitled.png?id=80f49f37-9a1a-4d2c-a4cc-902f6cc6926d&table=block&spaceId=ba7f30e5-e7fc-494b-8d26-a64382d8e94d&width=380&userId=&cache=v2",
+      "feedbacksPositivos": 150,
+      "feedbacksNegativos": 15,
+      "id": 1
+    },
+    {
+      "titulo": "A revolução dos bichos",
+      "autor": "George Orwell",
+      "isbn": "8535909559",
+      "editora": "Companhia das Letras",
+      "publicacao": "10 de janeiro de 2007",
+      "nacionalidade": "Indiano",
+      "paginas": 152,
+      "preco": 12.9,
+      "quantidade": 10,
+      "descricao": "Verdadeiro clássico moderno, concebido por um dos mais influentes escritores do século XX, A revolução dos bichos é uma fábula sobre o poder. Narra a insurreição dos animais de uma granja contra seus donos. Progressivamente, porém, a revolução degenera numa tirania ainda mais opressiva que a dos humanos.\n\nEscrita em plena Segunda Guerra Mundial e publicada em 1945 depois de ter sido rejeitada por várias editoras, essa pequena narrativa causou desconforto ao satirizar ferozmente a ditadura stalinista numa época em que os soviéticos ainda eram aliados do Ocidente na luta contra o eixo nazifascista. De fato, são claras as referências: o despótico Napoleão seria Stálin, o banido Bola-de-Neve seria Trotsky, e os eventos políticos - expurgos, instituição de um estado policial, deturpação tendenciosa da História - mimetizam os que estavam em curso na União Soviética. Com o acirramento da Guerra Fria, as mesmas razões que causaram constrangimento na época de sua publicação levaram A revolução dos bichos a ser amplamente usada pelo Ocidente nas décadas seguintes como arma ideológica contra o comunismo. O próprio Orwell, adepto do socialismo e inimigo de qualquer forma de manipulação política, sentiu-se incomodado com a utilização de sua fábula como panfleto. Depois das profundas transformações políticas que mudaram a fisionomia do planeta nas últimas décadas, a pequena obra-prima de Orwell pode ser vista sem o viés ideológico reducionista. Mais de sessenta anos depois de escrita, ela mantém o viço e o brilho de uma alegoria perene sobre as fraquezas humanas que levam à corrosão dos grandes projetos de revolução política. É irônico que o escritor, para fazer esse retrato cruel da humanidade, tenha recorrido aos animais como personagens. De certo modo, a inteligência política que humaniza seus bichos é a mesma que animaliza os homens. Escrito com perfeito domínio da narrativa, atenção às minúcias e extraordinária capacidade de criação de personagens e situações, A revolução dos bichos combina de maneira feliz duas ricas tradições literárias: a das fábulas morais, que remontam a Esopo, e a da sátira política, que teve talvez em Jonathan Swift seu representante máximo. 'A melhor sátira já escrita sobre a face negra da história moderna.' - Malcolm Bradbury. 'Um livro para todos os tipos de leitor, seu brilho ainda intacto depois de sessenta anos.' - Ruth Rendell.",
+      "genero": "Ficção Científica",
+      "imagem": "https://m.media-amazon.com/images/I/91BsZhxCRjL.jpg",
+      "feedbacksPositivos": 1315,
+      "feedbacksNegativos": 22,
+      "id": 2
+    },
+    {
+      "titulo": "A invenção de Hugo Cabret",
+      "autor": "Brian Selznick",
+      "isbn": "8576752034",
+      "editora": "SM",
+      "publicacao": "01 de janeiro de 2007",
+      "nacionalidade": "Estadunidense",
+      "paginas": 534,
+      "preco": 57.99,
+      "quantidade": 65,
+      "descricao": "Em 1931, o menino órfão Hugo Cabret vive escondido em uma estação de trem de Paris. Ali, cuida do funcionamento de gigantescos relógios no lugar do tio que desapareceu. À noite, tenta consertar uma máquina de aparência humana para desvendar uma mensagem oculta, usando peças de brinquedos que ele furta. Seus planos, porém, correm risco. Ele é descoberto pelo dono da loja de brinquedos da estação e pela curiosa Isabelle. Essa obra-prima aclamada pela crítica mundial mistura elementos do cinema e dos quadrinhos para contar uma história sobre os primórdios do cinema, a vontade de criar vida e a aventura da imaginação. O livro deu origem ao filme The Invention of Hugo Cabret, dirigido por Martin Scorsese, cujo lançamento está previsto para dezembro de 2011.",
+      "genero": "Aventura",
+      "imagem": "https://m.media-amazon.com/images/I/61vJZxMNR6L._SX331_BO1,204,203,200_.jpg",
+      "feedbacksPositivos": 132,
+      "feedbacksNegativos": 4,
+      "id": 3
+    },
+    {
+      "titulo": "O Silmarillion",
+      "autor": "J. R. R. Tolkien",
+      "isbn": "8595084378",
+      "editora": "HarperCollins",
+      "publicacao": "19 de março de 2019",
+      "nacionalidade": "Britânico",
+      "paginas": 496,
+      "preco": 41.9,
+      "quantidade": 462,
+      "descricao": "O Silmarillion é o relato dos Dias Antigos da Primeira Era do mundo criado por J.R.R. Tolkien. É a história longínqua para a qual os personagens de O Senhor dos Anéis e O Hobbit olham para trás, e em cujos eventos alguns deles, como Elrond e Galadriel, tomaram parte. Os contos de O Silmarillion se passam na época em que Morgoth, o Primeiro Senhor Sombrio, habitava a Terra-média, e os Altos-Elfos guerreavam contra ele pela recuperação das Silmarils, as joias que continham a pura luz de Valinor. O livro começa com o 'Ainulindalë', o mito da criação do Universo, seguido pelo 'Valaquenta', onde estão descritas a natureza e os poderes de cada um dos deuses. Em o 'Quenta Silmarillion' há o início da contagem dos dias em Arda (o mundo onde está inserido o continente da Terra-média), a história dos Elfos na Terra Abençoada do Oeste, seus êxodos e o desenrolar das guerras élficas em Beleriand, que culminaram com o final da Primeira Era. O 'Akallabêth' narra o apogeu e a queda do reino da grande ilha de Númenor no final da Segunda Era. Por fim, 'Dos Anéis de Poder' fala dos grandes eventos no final da Terceira Era, como narrado em O Senhor dos Anéis.",
+      "genero": "Aventura",
+      "imagem": "https://m.media-amazon.com/images/I/51UI-f5k6tL._SX329_BO1,204,203,200_.jpg",
+      "feedbacksPositivos": 791,
+      "feedbacksNegativos": 6,
+      "id": 4
+    },
+    {
+      "titulo": "Trono de vidro",
+      "autor": "Sarah J. Maas",
+      "isbn": "8501401382",
+      "editora": "Galera",
+      "publicacao": "06 de agosto de 2013",
+      "nacionalidade": "Estadunidense",
+      "paginas": 392,
+      "preco": 36.99,
+      "quantidade": 75,
+      "descricao": "A magia há muito abandonou Adarlan. Um perverso rei governa, punindo impiedosamente as minorias rebeldes. Mas tudo pode mudar quando uma assassina é chamada para o castelo. Em Trono de vidro, livro que dá início à série bestseller com mais de um milhão de cópias vendidas e legiões de fãs no mundo todo, Celaena tem uma perigosa missão que pode lhe garantir sua tão sonhada liberdade ou ser a sua sentença de morte.\n\nAos 18 anos uma prisioneira está cumprindo sua sentença. Ela é uma assassina, e a melhor de Adarlan. Aprisionada e fraca, ela está quase perdendo as esperanças, a sentença de morte é iminente, mas a jovem recebe uma proposta inesperada: representar o príncipe em uma competição com lutando contra os mais habilidosos assassinos e larápios do reino. Mas ela não diz sim apenas para matar, seu foco é obter sua liberdade de volta.\n\nSe derrotar os 23 assassinos, ladrões e soldados, será a campeã do rei e estará livre depois de servi-lo por alguns anos.\n\nEndovier é uma sentença de morte, e cada duelo em Adarlan será para viver ou morrer. Mas se o preço é ser livre, e ela está disposta a tudo.\n\nSeu nome é Celaena Sardothien. O príncipe herdeiro vai provocá-la, o capitão da guarda fará tudo para protegê-la. E uma princesa de terras distantes se tornará algo que Celaena jamais pensou ter novamente: uma amiga.\n\nMas algo maligno habita o castelo - e está ali para matar. Quando os demais competidores começam a morrer, um a um e de maneira terrível, Celaena se vê mais uma vez envolvida em uma batalha pela sobrevivência e inicia uma jornada desesperada para desvendar a origem daquele mal antes que ele destrua o mundo dela. E sua única chance de ser livre.\n\nNo ritmo dos livros de fantasia de Tolkien, o mundo de Celaena é aquele em que a magia é proibida e o poder é arrebatado pela ganância. A narrativa em terceira pessoa permite uma visão frequente de vários personagens (heróis e vilões), mas sem perder o foco da confiante e conflitante protagonista.\n\nEleito um dos melhores livros do ano pela Amazon e best seller do New York Times, o universo de Trono de vidro começou a ganhar forma quando Sarah J. Maas pensou: e se Cinderela fosse uma assassina? E se fosse ao baile não para dançar com o príncipe, mas para matá-lo? Assim nasceu Celaena Sardothien, a heroína que conquistou milhares de leitores por todo o mundo.",
+      "genero": "Aventura",
+      "imagem": "https://papelarianobel.com.br/wp-content/uploads/2021/07/trono-1.1.jpg",
+      "feedbacksPositivos": 646,
+      "feedbacksNegativos": 42,
+      "id": 5
+    },
+    {
+      "titulo": "O Hobbit",
+      "autor": "J.R.R. Tolkien",
+      "isbn": "8595084742",
+      "editora": "HarperCollins",
+      "publicacao": "15 de julho de 2019",
+      "nacionalidade": "Britânico",
+      "paginas": 336,
+      "preco": 43.6,
+      "quantidade": 198,
+      "descricao": "Bilbo Bolseiro era um dos mais respeitáveis hobbits de todo o Condado até que, um dia, o mago Gandalf bate à sua porta. A partir de então, toda sua vida pacata e campestre soprando anéis de fumaça com seu belo cachimbo começa a mudar. Ele é convocado a participar de uma aventura por ninguém menos do que Thorin Escudo-de-Carvalho, um príncipe do poderoso povo dos Anãos.\n\nEsta jornada fará Bilbo, Gandalf e 13 anãos atravessarem a Terra-média, passando por inúmeros perigos, como os imensos trols, as Montanhas Nevoentas infestadas de gobelins ou a muito antiga e misteriosa Trevamata, até chegarem (se conseguirem) na Montanha Solitária. Lá está um incalculável tesouro, mas há um porém. Deitado em cima dele está Smaug, o Dourado, um dragão malicioso que... bem, você terá que ler para descobrir.\n\nLançado em 1937, O Hobbit é um divisor de águas na literatura de fantasia mundial. Mais de 80 anos após a sua publicação, o livro que antecede os ocorridos em O Senhor dos Anéis continua arrebatando fãs de todas as idades, talvez pelo seu tom brincalhão com uma pitada de magia élfica, ou talvez porque J.R.R. Tolkien tenha escrito o melhor livro infantojuvenil de todos os tempos.",
+      "genero": "Fantasia",
+      "imagem": "https://m.media-amazon.com/images/I/91M9xPIf10L.jpg",
+      "feedbacksPositivos": 4563,
+      "feedbacksNegativos": 2,
+      "id": 6
+    },
+    {
+      "titulo": "O Pequeno Príncipe",
+      "autor": "Antoine de Saint-Exupéry",
+      "isbn": "8595081514",
+      "editora": "HarperCollins",
+      "publicacao": "27 de agosto de 2018",
+      "nacionalidade": "Frances",
+      "paginas": 96,
+      "preco": 18.99,
+      "quantidade": 56,
+      "descricao": "Conheça a edição mais consagrada de um dos maiores clássicos da literatura, publicada no Brasil desde 1952, com a tradução do poeta dom Marcos Barbosa e as ilustrações originais em aquarela do autor.\n\nNesta história que marcou gerações de leitores em todo o mundo, um piloto cai com seu avião no deserto do Saara e encontra um pequeno príncipe, que o leva a uma aventura filosófica e poética através de planetas que encerram a solidão humana.\n\nUm livro para todos os públicos, O pequeno príncipe é uma obra atemporal, com metáforas pertinentes e aprendizados sobre afeto, sonhos, esperança e tudo aquilo que é invisível aos olhos.",
+      "genero": "Fantasia",
+      "imagem": "https://imagens.disal.com.br/produtos/ampliada/5622395.jpg",
+      "feedbacksPositivos": 655,
+      "feedbacksNegativos": 6,
+      "id": 7
+    },
+    {
+      "titulo": "Para o Lobo",
+      "autor": "Hannah Whitten",
+      "isbn": "8556511503",
+      "editora": "Suma",
+      "publicacao": "28 de julho de 2022",
+      "nacionalidade": "Estunidense",
+      "paginas": 392,
+      "preco": 41.9,
+      "quantidade": 564,
+      "descricao": "Destinada a se sacrificar pelo reino, Red enfrentará os perigos de uma floresta mágica para proteger aqueles que ama e descobrirá verdades perigosas por trás das lendas de seu povo. Primeiro volume da duologia Wilderwood, Para o Lobo é uma fantasia dark que combina elementos de contos de fadas em uma narrativa envolvente e repleta de personagens inesquecíveis.\n\nO reino de Valleyda não via o nascimento de uma Segunda Filha há cem anos ― até a Rainha dar à luz Redarys, ou Red, irmã mais nova de Neverah. Seu propósito de vida é um só: o sacrifício.\nAo completar vinte anos, Red se entregará ao temido Lobo em Wilderwood ― a floresta que faz fronteira com seu lar ―, para cumprir o pacto selado há quatro séculos e garantir a segurança não só de Valleyda, mas também de todos os demais reinos.\nCarregando o fardo de um poder que não consegue controlar, Red sempre soube de seu destino e está quase aliviada por cumpri-lo: na floresta, ela não pode machucar aqueles que ama.\nNo entanto, apesar do que dizem as lendas, o Lobo é apenas um homem, não um monstro. E os poderes de Red são um chamado, não uma maldição. Enquanto descobre a verdade por trás dos mitos, a Segunda Filha precisará aprender a controlar sua magia antes que as sombras tomem conta de seu mundo.\n\nCom atmosfera densa e uma prosa perspicaz e contundente, Para o Lobo é uma jornada gloriosa pelas profundezas de florestas obscuras. ― Erin Craig",
+      "genero": "Fantasia",
+      "imagem": "https://m.media-amazon.com/images/I/91qd9RnvQuL.jpg",
+      "feedbacksPositivos": 456,
+      "feedbacksNegativos": 25,
+      "id": 8
+    },
+    {
+      "titulo": "Cem Anos de solidão",
+      "autor": "Gabriel García Márquez",
+      "isbn": "8501110361",
+      "editora": "Record",
+      "publicacao": "01 de janeiro de 2018",
+      "nacionalidade": "Colombiano",
+      "paginas": 432,
+      "preco": 78.99,
+      "quantidade": 43,
+      "descricao": "Em Cem anos de solidão, um dos maiores clássicos da literatura, o prestigiado autor narra a incrível e triste história dos Buendía - a estirpe de solitários para a qual não será dada 'uma segunda oportunidade sobre a terra' e apresenta o maravilhoso universo da fictícia Macondo, onde se passa o romance. É lá que acompanhamos diversas gerações dessa família, assim como a ascensão e a queda do vilarejo. Para além dos artifícios técnicos e das influências literárias que transbordam do livro, ainda vemos em suas páginas o que por muitos é considerado uma autêntica enciclopédia do imaginário, num estilo que consagrou o colombiano como um dos maiores autores do século XX.\n\nEm nenhum outro livro García Márquez empenhou-se tanto para alcançar o tom com que sua avó materna lhe contava os episódios mais fantásticos sem alterar um só traço do rosto. Assim, ao mesmo tempo em que a incrível e triste história dos Buendía pode ser entendida como uma autêntica enciclopédia do imaginário, ela é narrada de modo a parecer que tudo faz parte da mais banal das realidades.\n\nGabo, apelido de Gabriel García Márquez, costumava dizer que todo grande escritor está sempre escrevendo o mesmo livro. 'E qual seria o seu?', perguntaram-lhe. 'O livro da solidão', foi a resposta. Apesar disso, ele não considerava Cem anos sua melhor obra (gostava demais de O outono do patriarca). O que importa? O certo é que nenhum outro romance resume tão completamente o formidável talento deste contador de histórias de solitários - que se espalham e se espalharão por muito mais de cem anos pelas Macondos de todo o mundo.\n\nCem anos de solidão é uma obra grandiosa e atemporal, sobre a qual é possível construir diversos paralelos com a nossa própria existência.",
+      "genero": "Romance",
+      "imagem": "https://m.media-amazon.com/images/I/816Yy5v+S5L._AC_UF1000,1000_QL80_.jpg",
+      "feedbacksPositivos": 129,
+      "feedbacksNegativos": 8,
+      "id": 9
+    },
+    {
+      "titulo": "Doutor sono",
+      "autor": "Stephen King",
+      "isbn": "8581052436",
+      "editora": "Suma",
+      "publicacao": "23 de outubro de 2014",
+      "nacionalidade": "Estadunidense",
+      "paginas": 480,
+      "preco": 32.9,
+      "quantidade": 45,
+      "descricao": "Mais de trinta anos depois, Stephen King revela a seus leitores o que aconteceu a Danny Torrance, o garoto no centro de O iluminado, depois de sua terrível experiência no Overlook Hotel. Em Doutor Sono, King dá continuidade a essa história, contando a vida de Dan, agora um homem de meia-idade, e Abra Stone, uma menina de doze anos com um grande poder. Assombrado pelos habitantes do Overlook Hotel, onde passou um ano terrível da infância, Dan ficou à deriva por décadas, desesperado para se livrar do legado de alcoolismo e violência do pai. Por fim, ele se instala em uma cidade de New Hampshire, onde encontra abrigo em uma comunidade do Alcoólicos Anônimos que o apoia e um emprego em uma casa de repouso, onde seu poder remanescente da iluminação fornece o conforto final para aqueles que estão morrendo. Ajudado por um gato que prevê a morte dos pacientes, ele se torna o Doutor Sono. Então Dan conhece Abra Stone, uma menina com um dom espetacular, a iluminação mais forte que já se viu. Ela desperta os demônios de seu passado e Dan se vê envolvido em uma batalha pela alma e sobrevivência dela. Uma guerra épica entre o bem e o mal, uma sangrenta e gloriosa história que vai emocionar os milhões de fãs de O Iluminado e satisfazer os leitores deste novo clássico da obra de King.",
+      "genero": "Terror/Horror",
+      "imagem": "https://m.media-amazon.com/images/I/81caDOQBC-L.jpg",
+      "feedbacksPositivos": 896,
+      "feedbacksNegativos": 12,
+      "id": 10
+    },
+    {
+      "titulo": "O Homem de Giz",
+      "autor": "C. J. Tudor",
+      "isbn": "8551002937",
+      "editora": "Intrínseca",
+      "publicacao": "15 de março de 2018",
+      "nacionalidade": "Inglesa",
+      "paginas": 272,
+      "preco": 51.9,
+      "quantidade": 45,
+      "descricao": "Assassinato e sinais misteriosos em uma trama para fãs de Stranger Things e Stephen King\n\nEm 1986, Eddie e os amigos passam a maior parte dos dias andando de bicicleta pela pacata vizinhança em busca de aventuras. Os desenhos a giz são seu código secreto: homenzinhos rabiscados no asfalto; mensagens que só eles entendem. Mas um desenho misterioso leva o grupo de crianças até um corpo desmembrado e espalhado em um bosque. Depois disso, nada mais é como antes.\n\nEm 2016, Eddie se esforça para superar o passado, até que um dia ele e os amigos de infância recebem um mesmo aviso: o desenho de um homem de giz enforcado. Quando um dos amigos aparece morto, Eddie tem certeza de que precisa descobrir o que de fato aconteceu trinta anos atrás.\n\nAlternando habilidosamente entre presente e passado, O Homem de Giz traz o melhor do suspense: personagens maravilhosamente construídos, mistérios de prender o fôlego e reviravoltas que vão impressionar até os leitores mais escaldados.",
+      "genero": "Terror/Horror",
+      "imagem": "https://m.media-amazon.com/images/I/91o6FMAy8UL.jpg",
+      "feedbacksPositivos": 645,
+      "feedbacksNegativos": 21,
+      "id": 11
+    },
+    {
+      "titulo": "O ritmo das nossas vidas",
+      "autor": "Axie Oh",
+      "isbn": "6559810372",
+      "editora": "Companhia Editora Nacional",
+      "publicacao": "16 de novembro de 2022",
+      "nacionalidade": "Brasileira",
+      "paginas": 256,
+      "preco": 47.92,
+      "quantidade": 64,
+      "descricao": "Uma vida de dor e abandono fizeram de Beyah uma pessoa cética, desconfiada e boa em guardar segredos. Mas, até o verão terminar, ela terá que rever tudo o que acredita. Da mesma autora dos sucessos É assim que acaba, Layla e Verity.\n\nFilha de uma mãe problemática e um pai ausente, Beyah precisou aprender a se virar sozinha desde pequena. Sua vida foi trilhada com muitas decepeções. Mas ela está prestes a mudar a sua sorte graças a si mesma, e a mais ninguém, por conta da bolsa de estudos que ganhou para estudar em uma boa universidade. Apenas dois curtos meses separam o tão sonhado futuro do passado que tanto deseja deixar para trás. Mas uma reviravolta faz Beyah perder até mesmo a casa em que mora.\n\nSem opção, ela recorre ao último recurso que tem e precisará passar o resto do verão na casa de praia do pai que mal conhece, da nova esposa e da filha dela que nem ao menos ouvira falar. O plano de Beyah é se manter quase invisível até poder ir para a faculdade. Mas o vizinho da casa ao lado torna tudo muito mais complicado. Afinal, é difícil ignorar o rico, bonito e misterioso Samson.\n\nOs dois parecem não ter nada em comum. Ela viveu uma vida sem dinheiro ou amor enquanto ele tem uma família rica e privilegiada. Mas no olhar dele vive uma tristeza que apenas quem também a carrega dentro de si consegue reconhecer. E isso os torna irresístiveis um para o outro. Sem terem como fugir da atração que sentem, Beyah e Samson resolvem se dar uma chance, mas apenas até o verão terminar.\n\nUma história de amor, recomeços, despedidas e reencontros.",
+      "genero": "Romance",
+      "imagem": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQjKvPxz_oyH3zWGSgIzcEHktOT8EeKXO-iyGUEry-mFKu4j3oF",
+      "feedbacksPositivos": 91,
+      "feedbacksNegativos": 7,
+      "id": 12
+    },
+    {
+      "titulo": "Nunca Saia Sozinho",
+      "autor": "Charlie Donlea",
+      "isbn": "6586041368",
+      "editora": "intriseca",
+      "publicacao": "05 de outubro de 2020",
+      "nacionalidade": "Estadunidense",
+      "paginas": 352,
+      "preco": 31.9,
+      "quantidade": 45,
+      "descricao": "SE ACEITAR O CONVITE, NÃO IGNORE O AVISO. Dentro dos muros de uma escola de elite as expectativas são altas, e as regras, rígidas. Na floresta, além do campus bem cuidado, há uma pensão abandonada que é utilizada pelos alunos como ponto de encontro noturno. Para quem entra, existe apenas uma regra: não deixe sua vela apagar ― a menos que você queira encontrar o Homem do Espelho... Há um ano, dois estudantes foram mortos em um massacre terrível. Desde então, o caso se tornou o foco do podcast “A casa dos suicídios”. Embora um professor tenha sido condenado pelos assassinatos, muitos mistérios e perguntas permanecem. O mais urgente é: por que tantos alunos que sobreviveram àquela noite macabra voltaram ao lugar para se matar? Rory Moore, especialista em casos arquivados, e seu parceiro, Lane Philips, começam a investigar a noite dos assassinatos, em busca de pistas que possam ter escapado da escola e da polícia. Porém, quanto mais descobrem sobre os alunos e aquele jogo perigoso que deu errado, eles se convencem de que algo fora do normal ainda está acontecendo. O jogo não acabou. Ele prospera... em segredo, em silêncio. E, para seus jogadores, pode não haver uma maneira de vencer ou de sobreviver.",
+      "genero": "Terror/Horror",
+      "imagem": "https://m.media-amazon.com/images/I/41qgCq9pQ5L.jpg",
+      "feedbacksPositivos": 566,
+      "feedbacksNegativos": 81,
+      "id": 13
+    },
+    {
+      "titulo": "Arsène Lupin: O Ladrão de Casaca",
+      "autor": "Maurice Leblanc",
+      "isbn": "8537815632",
+      "editora": "Clássicos Zahar",
+      "publicacao": "16 de junho de 2016",
+      "nacionalidade": "Francês",
+      "paginas": 280,
+      "preco": 20.9,
+      "quantidade": 87,
+      "descricao": "Arsène Lupin, o ladrão de Casaca é uma coletânea de nove histórias do escritor francês Maurice Leblanc que constituem as primeiras aventuras de Arsène Lupin. O editor da revista francesa Je sais tout encomendou a Maurice uma novela policial, cujo herói fosse para França o que era para a Inglaterra o detetive Sherlock Holmes, de Sir Arthur Conan Doyle. Nasceu assim Arsène Lupin, personagem vivo, audacioso, impertinente, desafiando sem cessar o Inspetor Ganimard, arrastando corações atrás de si, zombando das posições conquistadas e ridicularizando os burgueses, socorrendo os fracos, Arsène Lupin é um Robin Hood da Belle Époque. Nessa edição especial em capa dura, o leitor encontrará a versão integral do texto, traduzido diretamente do francês. Acompanham pôster e marcador exclusivo.",
+      "genero": "Mistério",
+      "imagem": "https://m.media-amazon.com/images/I/81F45oF2ASL.jpg",
+      "feedbacksPositivos": 92,
+      "feedbacksNegativos": 3,
+      "id": 14
+    },
+    {
+      "titulo": "A garota do lago",
+      "autor": "Charlie Donlea",
+      "isbn": "8562409889",
+      "editora": "Faro Editorial",
+      "publicacao": "01 de janeiro de 2017",
+      "nacionalidade": "Estadunidense",
+      "paginas": 296,
+      "preco": 11.99,
+      "quantidade": 56,
+      "descricao": "Summit Lake, uma pequena cidade entre montanhas, é esse tipo de lugar, bucólico e com encantadoras casas dispostas à beira de um longo trecho de água intocada. Duas semanas atrás, a estudante de direito Becca Eckersley foi brutalmente assassinada em uma dessas casas. Filha de um poderoso advogado, Becca estava no auge de sua vida. Atraída instintivamente pela notícia, a repórter Kelsey Castle vai até a cidade para investigar o caso. ...E LOGO SE ESTABELECE UMA CONEXÃO ÍNTIMA QUANDO UM VIVO CAMINHA NAS MESMAS PEGADAS DOS MORTOS... E enquanto descobre sobre as amizades de Becca, sua vida amorosa e os segredos que ela guardava, a repórter fica cada vez mais convencida de que a verdade sobre o que aconteceu com Becca pode ser a chave para superar as marcas sombrias de seu próprio passado.",
+      "genero": "Mistério",
+      "imagem": "https://m.media-amazon.com/images/I/81LRk6+p1HL.jpg",
+      "feedbacksPositivos": 789,
+      "feedbacksNegativos": 45,
+      "id": 15
+    },
+    {
+      "titulo": "Morte no Nilo",
+      "autor": "Agatha Christie",
+      "isbn": "6555110023",
+      "editora": "HarperCollins",
+      "publicacao": "15 de setembro de 2020",
+      "nacionalidade": "Inglesa",
+      "paginas": 320,
+      "preco": 27.9,
+      "quantidade": 64,
+      "descricao": "A tranquilidade de um cruzeiro de luxo pelo Nilo chega ao fim quando o corpo de Linnet Doyle, uma bela e jovem milionária, é descoberto em sua cabine. Porém, para azar do autor do crime, o brilhante detetive Hercule Poirot está a bordo. Ele logo descobre que cada passageiro é suspeito, pois todos tinham motivos para tirar a vida de Linnet. Em um rio de mentiras, Poirot precisa descobrir a verdade sobre esse estranho assassinato. Das páginas para as telas, o mistério a bordo mais instigante da Rainha do Crime ganha adaptação cinematográfica pela 20th Century Studios.",
+      "genero": "Mistério",
+      "imagem": "https://m.media-amazon.com/images/I/71Jt2eJxI6L.jpg",
+      "feedbacksPositivos": 987,
+      "feedbacksNegativos": 56,
+      "id": 16
+    },
+    {
+      "titulo": "Entendendo Algoritmos: Um guia ilustrado para programadores e outros curiosos",
+      "autor": "Aditya Y. Bhargava",
+      "isbn": "B07B61HC3L",
+      "editora": "Novatec Editora",
+      "publicacao": "01 de março de 2018",
+      "nacionalidade": "Indiano",
+      "paginas": 400,
+      "preco": 55.5,
+      "quantidade": 50,
+      "descricao": "Um guia ilustrado para programadores e outros curiosos. Um algoritmo nada mais é do que um procedimento passo a passo para a resolução de um problema. Os algoritmos que você mais utilizará como um programador já foram descobertos, testados e provados. Se você quer entendê-los, mas se recusa a estudar páginas e mais páginas de provas, este é o livro certo. Este guia cativante e completamente ilustrado torna simples aprender como utilizar os principais algoritmos nos seus programas. O livro Entendendo Algoritmos apresenta uma abordagem agradável para esse tópico essencial da ciência da computação. Nele, você aprenderá como aplicar algoritmos comuns nos problemas de programação enfrentados diariamente. Você começará com tarefas básicas como a ordenação e a pesquisa. Com a prática, você enfrentará problemas mais complexos, como a compressão de dados e a inteligência artificial. Cada exemplo é apresentado em detalhes e inclui diagramas e códigos completos em Python. Ao final deste livro, você terá dominado algoritmos amplamente aplicáveis e saberá quando e onde utilizá-los. O que este livro inclui A abordagem de algoritmos de pesquisa, ordenação e algoritmos gráficos. Mais de 400 imagens com descrições detalhadas. Comparações de desempenho entre algoritmos. Exemplos de código em Python. Este livro de fácil leitura e repleto de imagens é destinado a programadores autodidatas, engenheiros ou pessoas que gostariam de recordar o assunto.",
+      "genero": "Informática",
+      "imagem": "https://m.media-amazon.com/images/P/B07B61HC3L.01._SCLZZZZZZZ_SX500_.jpg",
+      "feedbacksPositivos": 897,
+      "feedbacksNegativos": 12,
+      "id": 17
+    },
+    {
+      "titulo": "JavaScript: O Guia Definitivo",
+      "autor": "David Flanagan",
+      "isbn": "B016N7G8EK",
+      "editora": "Bookman",
+      "publicacao": "23 de junho de 2020",
+      "nacionalidade": "Estadunidense",
+      "paginas": 704,
+      "preco": 0,
+      "quantidade": 0,
+      "descricao": "Referência completa para programadores, JavaScript: O guia definitivo fornece uma ampla descrição da linguagem JavaScript básica e das APIs JavaScript do lado do cliente definidas pelos navegadores Web. Em sua 6ª edição, cuidadosamente reescrita para estar de acordo com as melhores práticas de desenvolvimento Web atuais, abrange ECMAScript 5 e HTML5 e traz novos capítulos que documentam jQuery e JavaScript do lado do servidor. Recomendado para programadores experientes que desejam aprender a linguagem de programação da Web e para programadores JavaScript que desejam ampliar seus conhecimentos e dominar a linguagem, este é o guia do programador e manual de referência de JavaScript completo e definitivo.",
+      "genero": "Informática",
+      "imagem": "https://m.media-amazon.com/images/P/B016N7G8EK.01._SCLZZZZZZZ_SX500_.jpg",
+      "feedbacksPositivos": 9887,
+      "feedbacksNegativos": 10,
+      "id": 18
+    },
+    {
+      "titulo": "Código Limpo",
+      "autor": "Aditya Y. Bhargava",
+      "isbn": "B07B61HC3L",
+      "editora": "Novatec Editora",
+      "publicacao": "01 de março de 2018",
+      "nacionalidade": "Indiano",
+      "paginas": 400,
+      "preco": 51.66,
+      "quantidade": 88,
+      "descricao": "Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito. Mas não precisa ser assim.O renomado especialista em software, Robert C. Martin, apresenta um paradigma revolucionário com Código limpo: Habilidades Práticas do Agile Software. Martin se reuniu com seus colegas do Mentor Object para destilar suas melhores e mais ágeis práticas de limpar códigos “dinamicamente” em um livro que introduzirá gradualmente dentro de você os valores da habilidade de um profissional de softwares e lhe tornar um programador melhor –mas só se você praticar.Que tipo de trabalho você fará? Você lerá códigos aqui, muitos códigos. E você deverá descobrir o que está correto e errado nos códigos. E, o mais importante, você terá de reavaliar seus valores profissionais e seu comprometimento com o seu ofício.Código limpo está divido em três partes. Na primeira há diversos capítulos que descrevem os princípios, padrões e práticas para criar um código limpo.A segunda parte consiste em diversos casos de estudo de complexidade cada vez maior. Cada um é um exercício para limpar um código – transformar o código base que possui alguns problemas em um melhor e eficiente. A terceira parte é a compensação: um único capítulo com uma lista de heurísticas e “odores” reunidos durante a criação dos estudos de caso. O resultado será um conhecimento base que descreve a forma como pensamos quando criamos, lemos e limpamos um código.Após ler este livro os leitores saberão:✔ Como distinguir um código bom de um ruim✔ Como escrever códigos bons e como transformar um ruim em um bom✔ Como criar bons nomes, boas funções, bons objetos e boas classes✔ Como formatar o código para ter uma legibilidade máxima✔ Como implementar completamente o tratamento de erro sem obscurecer a lógica✔ Como aplicar testes de unidade e praticar o desenvolvimento dirigido a testesEste livro é essencial para qualquer desenvolvedor, engenheiro de software, gerente de projeto, líder de equipes ou analistas de sistemas com interesse em construir códigos melhores.",
+      "genero": "Informática",
+      "imagem": "https://altabooks.com.br/wp-content/uploads/2021/07/Codigo_Limpo-scaled.jpg",
+      "feedbacksPositivos": 894,
+      "feedbacksNegativos": 5,
+      "id": 19
+    },
+    {
+      "titulo": "Diário de Anne Frank",
+      "autor": "Anne Frank",
+      "isbn": "6559572714",
+      "editora": "Faro Editorial",
+      "publicacao": "20 de março de 2023",
+      "nacionalidade": "Alemã",
+      "paginas": 224,
+      "preco": 44.9,
+      "quantidade": 55,
+      "descricao": "O DIÁRIO MAIS IMPORTANTE DO MUNDO Em 12 de junho de 1942, no aniversário de 13 anos, Anne Frank ganhou de presente um diário, um caderno simples, mas que receberia palavras capazes de mudar o mundo. Quando a perseguição aos judeus aumentava em seu próprio país, Anne e a família deixam a Alemanha para viver na Holanda, que poucos meses depois também seria ocupada pela Alemanha Nazista. Prevendo o risco, o pai de Anne prepara um lugar onde a família se manteria escondida por dois anos. No ano de 1944, os judeus ouviram um apelo no rádio que pedia aos holandeses que guardassem documentos importantes, para que, no futuro, todos os fatos durante a ocupação alemã pudessem vir a público. E esse chamado inspirou Anne a registrar no caderno tudo o que acontecia ao seu redor como se fosse um livro a ser publicado. Escrevia sobre os acontecimentos e reflexões dentro do esconderijo onde estava a família e mais quatro pessoas. Mas o local foi descoberto pela polícia, e ela, a irmã, o pai e a mãe foram levados para diferentes campos de concentração. Apenas o pai sobreviveu. O desejo de Anne era tornar-se uma escritora e jornalista, embora tivesse dúvidas sobre seu talento. Após a libertação do campo de Auschwitz, Otto Frank recebeu o diário e ficou impressionado: “Para mim foi uma revelação... Eu não tinha ideia da profundidade de seus pensamentos e sentimentos. Ela guardou todos esses sentimentos para si mesma”. Assim, ele decide publicá-lo e realizar o desejo da filha, tornando-o então um dos livros mais lidos sobre a perseguição aos judeus. E um alerta para as gerações futuras.",
+      "genero": "Biografia",
+      "imagem": "https://m.media-amazon.com/images/I/51vDPdETpAL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
+      "feedbacksPositivos": 897,
+      "feedbacksNegativos": 5,
+      "id": 20
+    },
+    {
+      "titulo": "Fahrenheit 451",
+      "autor": "Ray Bradbury",
+      "isbn": "8525052248",
+      "editora": "Biblioteca Azul",
+      "publicacao": "01 de junho de 2012",
+      "nacionalidade": "Estadunidense",
+      "paginas": 216,
+      "preco": 33.99,
+      "quantidade": 51,
+      "descricao": "Um clássico da distopia com uma mensagem cada vez mais atual\n\nGuy Montag é um bombeiro. Sua profissão é atear fogo nos livros. Em um mundo onde as pessoas vivem em função das telas e a literatura está ameaçada de extinção, os livros são objetos proibidos, e seus portadores são considerados criminosos. Montag nunca questionou seu trabalho; vive uma vida comum, cumpre o expediente e retorna ao final do dia para sua esposa e para a rotina do lar. Até que conhece Clarisse, uma jovem de comportamento suspeito, cheia de imaginação e boas histórias. Quando sua esposa entra em colapso mental e Clarisse desaparece, a vida de Montag não poderá mais ser a mesma.\n\nUm clássico da ficção científica e da literatura distópica, Fahrenheit 451 foi escrito originalmente como um conto: 'O bombeiro', contido no volume Prazer em Queimar: histórias de Fahrenheit 451. Incentivado pelo seu editor, transformou a ideia inicial em um romance, que se tornou um dos livros mais influentes de sua geração – e também um dos mais censurados e banidos de todos os tempos. Foi adaptado para o cinema duas vezes, a primeira pelas mãos do lendário cineasta francês François Truffaut, e depois para diversos formatos.\n\nEscrito durante a era do macartismo – a sistemática censura à arte promovida pelo governo americano nos anos 1950 – Bradbury costumava dizer que a proibição a livros não foi o motivo central que o levou a compor a obra, e sim a percepção de que as pessoas passavam a se interessar cada vez menos pela literatura com o surgimento de novas mídias, como a televisão. Com o passar do tempo, Fahrenheit 451 ganhou muitas camadas de interpretação: a história de um burocrata que questiona a vileza do seu trabalho, o poder libertador da palavra, a estupidez da censura às artes.\n\nEmbora soubesse estar testemunhando uma transformação social única, Bradbury afirmava não acreditar que o cenário que imaginou se tornaria realidade tão rápido. Lançado em 1953, Fahrenheit 451 é hoje uma obra de leitura indispensável junto com 1984, de George Orwell, e Admirável Mundo Novo, de Aldous Huxley.",
+      "genero": "Ficção Científica",
+      "imagem": "https://m.media-amazon.com/images/I/51tAD6LyZ-L.jpg",
+      "feedbacksPositivos": 451,
+      "feedbacksNegativos": 23,
+      "id": 21
+    },
+    {
+      "titulo": "Rita Lee",
+      "autor": "Rita Lee",
+      "isbn": "B0BXMQMX5X",
+      "editora": "Globo Livros",
+      "publicacao": "22 de maio de 2023",
+      "nacionalidade": "Brasileira",
+      "paginas": 179,
+      "preco": 52.2,
+      "quantidade": 69,
+      "descricao": "(...) quando decidi escrever Rita Lee: Uma autobiografia (2016), o livro marcava, de certo modo, uma despedida da persona ritalee, aquela dos palcos, uma vez que tinha me aposentado dos shows. Achei que nada mais tão digno de nota pudesse acontecer em minha vidinha besta. Mas é aquela velha história: enquanto a gente faz planos e acha que sabe de alguma coisa, Deus dá uma risadinha sarcástica.\n\nRita Lee\n\nRita pode ter tido de tudo, menos uma “vidinha besta”. E os últimos anos foram, sim, desafiadores. Ao mesmo tempo que o mundo passava por uma pandemia, ela foi diagnosticada com câncer no pulmão. Em um texto franco, ora cru e chocante, ora cheio de ironias, ora sutil e amoroso, Rita Lee não poupa detalhes de seu tratamento. Fala também da rotina, dos avisos do Universo, de seres de luz e dos caminhos que a vida tomou.\n\nCom franqueza e honestidade ― marcas registradas de sua escrita ―, ela pariu um novo livro autobiográfico que vai mexer profundamente com o leitor. Nossa compositora maior está, sem dúvida, no panteão literário entre os grandes escritores. Ao nos entregar este livro, Rita é tomada de uma coragem que só não é superior ao amor que tem por seu público. Afinal, ela quis contar a ele, tim-tim por tim-tim, o que se passou. Viva Rita!\n\nPhantom, março de 2023",
+      "genero": "Biografia",
+      "imagem": "https://m.media-amazon.com/images/P/B0BXMQMX5X.01._SCLZZZZZZZ_SX500_.jpg",
+      "feedbacksPositivos": 9559,
+      "feedbacksNegativos": 52,
+      "id": 22
+    },
+    {
+      "titulo": "O guia definitivo do Mochileiro das Galáxias",
+      "autor": "Douglas Adams",
+      "isbn": "8580415543",
+      "editora": "Editora Arqueiro",
+      "publicacao": "05 de maio de 2016",
+      "nacionalidade": "Inglesa",
+      "paginas": 672,
+      "preco": 76.9,
+      "quantidade": 42,
+      "descricao": "Pela primeira vez, reunimos em um único volume os cinco livros da cultuada série O Mochileiro das Galáxias, de Douglas Adams.\n\nCom mais de 15 milhões de exemplares vendidos, a saga do britânico esquisitão Arthur Dent pela Galáxia conquistou leitores do mundo inteiro. O humor ácido e as tramas surreais de Douglas Adams se tornaram ícones de uma geração e seguem fascinando – e divertindo – leitores de todas as idades. Pegue sua toalha, embarque nessa aventura improvável e, é claro, não entre em pânico!\n\nO Guia do Mochileiro das Galáxias\n\nSegundos antes de a Terra ser destruída para dar lugar a uma via expressa interespacial, Arthur Dent é salvo por Ford Prefect, um E.T. que fazia pesquisa de campo para a nova edição de O Guia do Mochileiro das Galáxias. Pegando carona numa nave alienígena, os dois dão início a uma alucinante viagem pelo tempo e pelo espaço.\n\nO Restaurante no Fim do Universo\n\nArthur Dent e seus quatro estranhos companheiros viajam pela Galáxia a bordo da nave Coração de Ouro, em uma busca desesperada por algum lugar para comer. Depois de fazer a refeição mais estranha de suas vidas, eles seguem pelo espaço e acabam descobrindo a questão sobre a Vida, o Universo e Tudo Mais.\n\nA Vida, o Universo e Tudo Mais\n\nArthur Dent passou os últimos cinco anos abandonado na Terra pré-histórica, mas ainda acordava todos os dias com um grito de horror. No entanto, talvez fosse melhor continuar nessa tediosa rotina do que ser arrastado para a sua próxima missão: salvar o Universo dos temíveis e infelizes robôs xenófobos do planeta Krikkit.\n\nAté Mais, e Obrigado Pelos Peixes!\n\nDepois de viajar pelo Universo, ver o aniquilamento da Terra, participar de guerras interestelares e conhecer criaturas extraordinárias, Arthur Dent está de volta ao seu planeta. E tudo parece estranhamente normal – exceto pelo desaparecimento dos golfinhos. Disposto a desvendar esse mistério, ele parte em uma nova jornada.\n\nPraticamente Inofensiva\n\nApós muitos anos vivendo separados, cada um em um canto mais insondável do Universo, Arthur Dent, Ford Prefect e Tricia McMillan se reencontram. Mas o que deveria ser uma festejada reunião de velhos amigos se transforma numa terrível confusão que põe em risco – mais uma vez – a vida de todos.",
+      "genero": "Ficção Científica",
+      "imagem": "https://m.media-amazon.com/images/I/71K0ACNXURL.jpg",
+      "feedbacksPositivos": 4242,
+      "feedbacksNegativos": 42,
+      "id": 23
+    },
+    {
+      "titulo": "Martin Luther King",
+      "autor": "Clayborne Carson",
+      "isbn": "B00NGV5O6A",
+      "editora": "Zahar",
+      "publicacao": "02 de outubro de 2014",
+      "nacionalidade": "Estadunidense",
+      "paginas": 525,
+      "preco": 56.9,
+      "quantidade": 78,
+      "descricao": "A voz única e incomparável de Martin Luther King em suas próprias palavras\n\nUm dos maiores símbolos da luta por igualdade, justiça e paz da humanidade, Martin Luther King liderou uma revolução que mudou os Estados Unidos e influenciou o mundo inteiro. Por sua política de resistência e transformação social através da não violência tornou-se a pessoa mais jovem a receber o Prêmio Nobel da Paz.\n\nCom base em arquivo inédito de textos autobiográficos do próprio King, incluindo cartas e diários não publicados, assim como filmes e gravações, Clayborne Carson - historiador da Universidade Stanford e diretor do Martin Luther King Jr. Research and Education Institute - cria um inesquecível retrato em primeira pessoa do grande líder.\n\n\"Valioso e inestimável. King era eloquente e refinado de forma consistente, um mestre da palavra e do efeito, dono de uma voz inconfundível e verdadeira.\" The New York Times Book Review\n\n\"Um feito excepcional. Ilumina os fundamentos intelectuais da coragem de King.\" The New Yorker\n\n\"Temos uma dívida com Carson por nos entregar King por inteiro.\" The Times",
+      "genero": "Biografia",
+      "imagem": "https://m.media-amazon.com/images/I/51kUpEQZB0L.jpg",
+      "feedbacksPositivos": 897,
+      "feedbacksNegativos": 56,
+      "id": 24
+    },
+    {
+      "titulo": "1499: O Brasil antes de Cabral",
+      "autor": "Reinaldo José Lopes",
+      "isbn": "8595080321",
+      "editora": "HarperCollins",
+      "publicacao": "01 de agosto de 2017",
+      "nacionalidade": "Brasileira",
+      "paginas": 248,
+      "preco": 33.9,
+      "quantidade": 89,
+      "descricao": "Saiba como uma mulher das cavernas azarada, caciques com mania de grandeza e conquistadores canibais estão revolucionando o que sabemos sobre o Brasil antes de Cabral. Esqueça a velha ideia de que, antes da chegada dos portugueses, o Brasil não passava de uma vasta extensão de mato povoada por um punhado de índios. A saga pré-histórica do país, que está sendo desenterrada por uma nova leva de estudos arqueológicos, inclui metrópoles \"perdidas\" em plena Amazônia, redes de comércio vibrantes, grandes monumentos e tradições artísticas espetaculares. Este livro relata a ascensão do Brasil pré-histórico – e explica por que ocorreu sua queda.\"Reinaldo pensa como cientista, escreve como jornalista e tem coração de arqueólogo. Seu livro faz um excelente trabalho ao contar para o público, de maneira clara e com graça, um pouco da nossa fascinante e pouco conhecida história profunda.\" – Eduardo Góes Neves - arqueólogo da USP\"Reinaldo José Lopes através do livro 1499: O Brasil antes de Cabral mostra como transformar de maneira honesta o fato científico em uma bela e deliciosa narrativa.\" – Maria Cátira Bortolini - Geneticista da UFRGS\"Tenho certeza de que a presente obra, além de saciar os curiosos e simpatizantes, será também utilizada em cursos básicos de arqueologia pelo país afora. Recomendo veementemente a leitura deste livro.\" – Walter Alves Neves - bioantropólogo da USP\"Basta relaxar e apreciar esse roteiro que nos conduz ao passado. Nessa máquina do tempo, o autor narra histórias, de forma extremamente agradável, com precisão científica e muito humor.\" – Fábio Oliveira Freitas – agrônomo e pesquisador da Embrapa",
+      "genero": "Histórico",
+      "imagem": "https://m.media-amazon.com/images/I/A1Agv75oYSL.jpg",
+      "feedbacksPositivos": 1500,
+      "feedbacksNegativos": 22,
+      "id": 25
+    },
+    {
+      "titulo": "A Arte da Guerra",
+      "autor": "Sun Tzu",
+      "isbn": "8594318596",
+      "editora": "Principis",
+      "publicacao": "02 de maio de 2019",
+      "nacionalidade": "Chinesa",
+      "paginas": 160,
+      "preco": 17.61,
+      "quantidade": 65,
+      "descricao": "\"A guerra é um assunto de importância vital para o Estado; o reino da vida ou da morte; o caminho para a sobrevivência ou a ruína. É indispensável estudá-la profundamente.\" - Sun Tzu",
+      "genero": "Histórico",
+      "imagem": "https://m.media-amazon.com/images/I/71FMCr5Z9rL.jpg",
+      "feedbacksPositivos": 5641,
+      "feedbacksNegativos": 5,
+      "id": 26
+    },
+    {
+      "titulo": "O Capital",
+      "autor": "Karl Marx",
+      "isbn": "8563137271",
+      "editora": "Veneta",
+      "publicacao": "07 de novembro de 2014",
+      "nacionalidade": "Alemão",
+      "paginas": 208,
+      "preco": 33.67,
+      "quantidade": 43,
+      "descricao": "O Capital – Extratos por Paul Lafargue (autor do clássico Direito à Preguiça) é a compilação dos trechos essenciais da obra de Karl Marx sobre o funcionamento do capitalismo, com o objetivo de facilitar o entendimento sem perder sua profundidade. Uma edição elogiada pelo próprio Marx.",
+      "genero": "Histórico",
+      "imagem": "https://m.media-amazon.com/images/I/71FXP9ye6xL.jpg",
+      "feedbacksPositivos": 130,
+      "feedbacksNegativos": 2,
+      "id": 27
+    }
+  ],
+  "pedidos": [
+    {
+      "itens": [
+        {
+          "idProduto": 2,
+          "quantidade": 1
+        }
+      ],
+      "valorTotal": 12.9,
+      "idUser": 2,
+      "id": 1
+    },
+    {
+      "itens": [
+        {
+          "idProduto": 2,
+          "quantidade": 1
+        }
+      ],
+      "valorTotal": 12.9,
+      "idUser": 2,
+      "id": 2
+    },
+    {
+      "itens": [
+        {
+          "idProduto": 4,
+          "quantidade": 2
+        }
+      ],
+      "valorTotal": 83.8,
+      "idUser": 2,
+      "id": 3
+    },
+    {
+      "itens": [
+        {
+          "idProduto": 6,
+          "quantidade": 1
+        }
+      ],
+      "valorTotal": 43.6,
+      "idUser": 2,
+      "id": 4
+    },
+    {
+      "itens": [
+        {
+          "idProduto": 6,
+          "quantidade": 1
+        }
+      ],
+      "valorTotal": 43.6,
+      "idUser": 2,
+      "id": 5
+    },
+    {
+      "itens": [
+        {
+          "idProduto": 9,
+          "quantidade": 2
+        }
+      ],
+      "valorTotal": 157.98,
+      "idUser": 2,
+      "id": 6
+    },
+    {
+      "itens": [
+        {
+          "idProduto": 9,
+          "quantidade": 1
+        },
+        {
+          "idProduto": 14,
+          "quantidade": 2
+        },
+        {
+          "idProduto": 16,
+          "quantidade": 1
+        },
+        {
+          "idProduto": 19,
+          "quantidade": 1
+        }
+      ],
+      "valorTotal": 200.35,
+      "idUser": 2,
+      "id": 7
+    },
+    {
+      "itens": [
+        {
+          "idProduto": 4,
+          "quantidade": 2
+        },
+        {
+          "idProduto": 27,
+          "quantidade": 2
+        }
+      ],
+      "valorTotal": 151.14,
+      "idUser": 4,
+      "id": 8
+    }
+  ]
+}
