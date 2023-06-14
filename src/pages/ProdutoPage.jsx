@@ -5,6 +5,7 @@ import Header from "../components/Header/Header";
 import BodyProduto from "../components/Principal/BodyProduto";
 import api from "../api/api";
 import { ProdutoContext } from "../context/ProdutoContext";
+import Footer from "../components/Footer/Footer";
 
 function ProdutoPage() {
   const navigate = useNavigate();
@@ -46,6 +47,7 @@ function ProdutoPage() {
     >
       <Header currentPage={"/product/:id"} />
       <BodyProduto />
+      <Footer />
     </div>
   );
 }

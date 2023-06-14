@@ -33,6 +33,11 @@ export default function Tab({ genero }) {
   const { setProdutos } = useContext(ProdutosContext);
   const { click, setClick } = useContext(ClickContext);
   const [style, setStyle] = useState({});
+  const { produtos } = useContext(ProdutosContext);
+
+  useEffect(() => {
+    genero.includes("Todos") ? setClick("Todos") : {};
+  }, []);
 
   useEffect(() => {
     if (!firstRender && click.includes(genero)) {
@@ -46,11 +51,8 @@ export default function Tab({ genero }) {
       setStyle({});
     }
     setFirstRender(false);
-  }, [click]);
+  }, [click, genero]);
 
-  useEffect(() => {
-    genero.includes("Todos") ? setClick("Todos") : {};
-  }, []);
 
   const handleClickTab = async (value) => {
     setClick(value);

@@ -151,9 +151,12 @@ const Header = ({ currentPage }) => {
   useEffect(() => {
     getUser();
     let qtdTransf = 0;
-    carrinho.forEach((item) => {
-      qtdTransf += item.quantidade;
-    });
+    if (carrinho) {
+      carrinho.forEach((item) => {
+        qtdTransf += item.quantidade;
+      });
+    }
+
     setQtdProduto(qtdTransf);
   }, [carrinho]);
 
@@ -164,6 +167,14 @@ const Header = ({ currentPage }) => {
       setNome(user.nome);
       setEmail(user.email);
     }
+    let qtdTransf = 0;
+    if (user.carrinho) {
+      user.carrinho.forEach((item) => {
+        qtdTransf += item.quantidade;
+      });
+    }
+
+    setQtdProduto(qtdTransf);
   }, [user]);
 
   const handleOpen = () => setOpen(true);
@@ -268,7 +279,9 @@ const Header = ({ currentPage }) => {
               }}
             >
               <DivCarrinhoContador onClick={handleClickBasket}>
-                {carrinho.length > 0 ? <Contador>{qtdProduto}</Contador> : null}
+                {carrinho && carrinho.length > 0 ? (
+                  <Contador>{qtdProduto}</Contador>
+                ) : null}
                 <Basket className="fa fa-shopping-basket"></Basket>
               </DivCarrinhoContador>
               <div style={{ display: "block" }}>

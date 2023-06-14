@@ -4,16 +4,16 @@ import { ProdutoContext } from "../../context/ProdutoContext";
 import { UserContext } from "../../context/UserContext";
 import ProdutoCapaGrande from "../Produto/ProdutoDetalhe";
 import { COLORS } from "../BaseComponents/Color";
-import { Col, Row, Space } from "antd";
+import { Col, Row, Divider } from "antd";
 import { CarrinhoContext } from "../../context/CarrinhoContext";
 import api from "../../api/api";
+import { useNavigate } from "react-router-dom";
 
 const DivMaior = styled.div`
   font-family: "Alef";
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   justify-items: center;
 `;
 
@@ -23,6 +23,7 @@ const DivContent = styled.div`
   box-shadow: 0px 19px 13px -14px rgba(0, 0, 0, 0.25);
   width: 90%;
   margin-block: 2%;
+  padding: 20px;
 `;
 
 const JoinhaUp = styled.i`
@@ -49,15 +50,18 @@ const JoinhaDown = styled.i`
 const Quantidade = styled.input`
   border-radius: 5px;
   box-shadow: none;
-
+  width: 25px;
   &:focus {
     outline: 0px;
   }
 `;
 
 const Adicionar = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2%;
-  font-family: "Alef";
+  font-family: "Alatsi";
   background-color: ${COLORS.orange};
   border-radius: 5px;
   border: none;
@@ -77,7 +81,21 @@ const Adicionar = styled.button`
   }
 `;
 
+const Voltar = styled.i`
+  font-size: 30px;
+  margin-left: 1.5%;
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+`;
+
+const Icone = styled.i`
+  font-size: 20px;
+`;
+
 const livroStyle = {
+  padding: "20px",
   width: "346px",
   height: "581px",
 };
@@ -86,12 +104,18 @@ const containerVenda = {
   backgroundColor: `${COLORS.lightGrey}`,
   boxShadow: "inset 0px 4px 4px rgba(0, 0, 0, 0.25)",
   borderRadius: "5px",
-  width: "30%",
-  height: "80%",
+  // width: "30%",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  gap: "2px",
+  padding: "18px 18px 10px 18px",
 };
 
 const BodyProduto = () => {
   const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate();
   const { produto, setProduto } = useContext(ProdutoContext);
   const [quantidade, setQuantidade] = useState(0);
   const { carrinho, setCarrinho } = useContext(CarrinhoContext);
@@ -171,6 +195,15 @@ const BodyProduto = () => {
       return agrupado;
     }, {});
     const carrinhoSorted = Object.values(resultado);
+    carrinhoSorted.sort((a, b) => {
+      if (a.idProduto < b.idProduto) {
+        return -1; // `a` vem antes de `b`
+      }
+      if (a.idProduto > b.idProduto) {
+        return 1; // `a` vem depois de `b`
+      }
+      return 0; // `a` e `b` são iguais
+    });
     if (atualizaCarrinho) {
       updateCarrinhoDb(carrinhoSorted);
     }
@@ -293,14 +326,12 @@ const BodyProduto = () => {
         <DivContent>
           <Row className="gutter-row" gutter={[16, 32]}>
             <Col span={24}>
-              <button
+              <Voltar
+                className="fa fa-angle-left"
                 onClick={() => {
-                  history.back();
+                  navigate("/home");
                 }}
-              >
-                {" "}
-                Voltar{" "}
-              </button>
+              ></Voltar>
             </Col>
           </Row>
           <Row
@@ -360,32 +391,77 @@ const BodyProduto = () => {
                     </div>
                   </div>
                 </div>
-                <h4>Descrição:</h4>
-                <div style={{ border: "1px solid grey" }}>
-                  <h6>{produto.descricao}</h6>
+                <h4 style={{ paddingTop: "5px" }}>Descrição:</h4>
+                <div style={{ margin: "0px" }}>
+                  <h6
+                    style={{
+                      margin: "0px",
+                      fontSize: "15px",
+                      fontFamily: "Alatsi",
+                    }}
+                  >
+                    {produto.descricao}
+                  </h6>
                 </div>
               </div>
             </Col>
             <Col style={containerVenda} className="gutter-row" span={6}>
               <div>
-                <h2>R$ {produto.preco}</h2>
+                <h2
+                  style={{
+                    margin: "0px",
+                    fontSize: "30px",
+                    paddingBottom: "7px",
+                  }}
+                >
+                  R$
+                  {produto && produto.preco !== 0 && produto.preco !== null
+                    ? parseFloat(produto.preco).toFixed(2)
+                    : null}
+                </h2>
               </div>
-              <div>
-                <button onClick={handleClickMais} type="button">
-                  +
+              <Divider style={{ paddingBottom: "7px" }} />
+              <div style={{ margin: "0px 10px 10px 0px" }}>
+                <h4>Entrega GRÁTIS: Quarta-feira, 14 de Junho</h4>
+                <h4>Enviar para {user.nome}</h4>
+              </div>
+              <Divider style={{ paddingBottom: "7px" }} />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingBottom: "10px",
+                }}
+              >
+                <h4 style={{ marginRight: "5px" }}>Quantidade</h4>
+                <button onClick={handleClickMenos} type="button">
+                  {" "}
+                  -{" "}
                 </button>
                 <Quantidade value={quantidade} onChange={handleChangeQtd} />
-                <button onClick={handleClickMenos} type="button">
-                  -
+                <button onClick={handleClickMais} type="button">
+                  {" "}
+                  +{" "}
                 </button>
-                <Adicionar type="button" onClick={handleClickAdd}>
-                  ADICIONAR À CESTA
-                </Adicionar>
               </div>
-              <div>
-                <h5>Pagamento Transação segura</h5>
-                <h5>Enviado por Amazon.com.br</h5>
-                <h5>Vendido por Amazon.com.br</h5>
+              <Adicionar type="button" onClick={handleClickAdd}>
+                ADICIONAR À CESTA
+              </Adicionar>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "0px 7px 7px 0px",
+                  width: "60%",
+                  paddingTop: "20px",
+                }}
+              >
+                <h5 style={{ margin: "0px" }}>Pagamento:</h5>
+                <h5 style={{ margin: "0px", color: "green" }}>
+                  Transação segura
+                </h5>
+                <Icone className="fa fa-shield"></Icone>
               </div>
             </Col>
           </Row>

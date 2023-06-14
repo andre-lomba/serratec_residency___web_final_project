@@ -24,6 +24,8 @@ function PedidoFeito() {
       }}
     >
       <Header currentPage={"/overview"} />
+
+      <Footer />
     </div>
   );
 }
