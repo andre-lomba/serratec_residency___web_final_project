@@ -19,6 +19,7 @@ function Home() {
   const { click, setClick } = useContext(ClickContext);
 
   useEffect(() => {
+    localStorage.removeItem("haPedido");
     if (!user) {
       navigate("/");
     } else if (search) {

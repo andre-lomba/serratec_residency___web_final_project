@@ -279,7 +279,7 @@ const Header = ({ currentPage }) => {
               }}
             >
               <DivCarrinhoContador onClick={handleClickBasket}>
-                {carrinho && carrinho.length > 0 ? (
+                {carrinho && carrinho.length > 0 && qtdProduto > 0 ? (
                   <Contador>{qtdProduto}</Contador>
                 ) : null}
                 <Basket className="fa fa-shopping-basket"></Basket>

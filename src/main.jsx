@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     element: <Carrinho />,
   },
   {
-    path: "/overview",
+    path: "/overview/:id",
     element: <PedidoFeito />,
   },
   {

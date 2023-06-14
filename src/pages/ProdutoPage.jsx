@@ -9,17 +9,20 @@ import Footer from "../components/Footer/Footer";
 
 function ProdutoPage() {
   const navigate = useNavigate();
+  const user = localStorage.getItem("user");
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
   const { produto, setProduto } = useContext(ProdutoContext);
 
   useEffect(() => {
-    const user = localStorage.getItem("user");
+    localStorage.removeItem("haPedido");
     if (!user) {
       navigate("/");
     } else {
+      setLoading(false);
       getLivro();
     }
-  }, []);
+  }, [navigate]);
 
   const getLivro = async () => {
     try {
@@ -32,24 +35,27 @@ function ProdutoPage() {
       console.log(error);
     }
   };
-  return (
-    <div
-      style={{
-        backgroundColor: `${COLORS.background}`,
-        minHeight: "100vh",
-        maxHeight: "100%",
-        width: "100%",
-        overflowY: "hidden",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-      }}
-    >
-      <Header currentPage={"/product/:id"} />
-      <BodyProduto />
-      <Footer />
-    </div>
-  );
+
+  if (loading) return <></>;
+  else
+    return (
+      <div
+        style={{
+          backgroundColor: `${COLORS.background}`,
+          minHeight: "100vh",
+          maxHeight: "100%",
+          width: "100%",
+          overflowY: "hidden",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        <Header currentPage={"/product/:id"} />
+        <BodyProduto />
+        <Footer />
+      </div>
+    );
 }
 
 export default ProdutoPage;

@@ -122,7 +122,36 @@ const ProdutoCarrinho = ({ item }) => {
     }
   };
 
-  const handleClickMenos = () => {};
+  const handleClickMenos = async () => {
+    if (item.quantidade < 2) {
+        handleClickExcluir()
+    } else {
+      let novoCarrinho = user.carrinho.filter((element) => {
+        return element.idProduto !== livro.id;
+      });
+      novoCarrinho.push({
+        idProduto: livro.id,
+        quantidade: parseInt(item.quantidade - 1),
+      });
+      novoCarrinho.sort((a, b) => {
+        if (a.idProduto < b.idProduto) {
+          return -1;
+        }
+        if (a.idProduto > b.idProduto) {
+          return 1;
+        }
+        return 0;
+      });
+      try {
+        const response = await api.patch(`/users/${user.id}`, {
+          carrinho: novoCarrinho,
+        });
+        setUser(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
 
   const handleClickMais = async () => {
     let novoCarrinho = user.carrinho.filter((element) => {

@@ -8,6 +8,7 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    localStorage.removeItem("haPedido");
     const timer = setTimeout(() => {
       const user = localStorage.getItem("user");
       if (user) navigate("/home");

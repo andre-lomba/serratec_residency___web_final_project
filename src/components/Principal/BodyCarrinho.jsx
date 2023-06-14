@@ -7,6 +7,8 @@ import api from "../../api/api";
 import { Button } from "@mui/material";
 import { UserContext } from "../../context/UserContext";
 import _ from "lodash";
+import { useNavigate } from "react-router-dom";
+import { Texto } from "./BodyPedidoFeito";
 
 export const DivMae = styled.div`
   font-family: "Alef";
@@ -117,6 +119,8 @@ const BodyCarrinho = () => {
   const { carrinho, setCarrinho } = useContext(CarrinhoContext);
   const [total, setTotal] = useState(0);
   const { user, setUser } = useContext(UserContext);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     user ? calculaPedido() : null;
@@ -149,7 +153,48 @@ const BodyCarrinho = () => {
     }
   };
 
-  const handleClickFinalizarPedido = () => {};
+  useEffect(() => {
+    console.log(error);
+  }, [error]);
+
+  const handleClickFinalizarPedido = async () => {
+    if (user) {
+      let valorTotal = 0;
+      for (const item of user.carrinho) {
+        try {
+          const response = await api.get(`/produtos/${item.idProduto}`);
+          // verifica se quantidade pedida está disponível no banco
+          if (item.quantidade > response.data.quantidade) {
+            return setError({
+              produto: response.data.titulo,
+              quantidade: response.data.quantidade,
+            });
+          }
+          // atualiza o banco de produtos com a nova quantidade
+          await api.patch(`/produtos/${item.idProduto}`, {
+            quantidade: response.data.quantidade - item.quantidade,
+          });
+          valorTotal += response.data.preco * item.quantidade;
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      try {
+        const response = await api.post("/pedidos", {
+          itens: user.carrinho,
+          valorTotal: valorTotal,
+          idUser: user.id,
+        });
+        api.patch(`/users/${user.id}`, {
+          carrinho: [],
+        });
+        localStorage.setItem("haPedido", JSON.stringify(response.data.id));
+        navigate(`/overview/${response.data.id}`);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
 
   return (
     <DivMae>
@@ -182,6 +227,21 @@ const BodyCarrinho = () => {
               <LimparCesta onClick={handleLimpaCesta}>LIMPAR CESTA</LimparCesta>
             </div>
           </div>
+          {error ? (
+            <Texto
+              style={{
+                position: "absolute",
+                color: "red",
+                fontSize: "20px",
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              *** Livro "{error.produto}" possui apenas {error.quantidade}{" "}
+              unidades em estoque!
+            </Texto>
+          ) : null}
           {user.carrinho && user.carrinho.length === 0 ? (
             <h1 style={{ fontFamily: "Alatsi" }}>CESTA VAZIA :(</h1>
           ) : null}
