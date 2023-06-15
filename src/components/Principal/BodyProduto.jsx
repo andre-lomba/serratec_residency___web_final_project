@@ -136,8 +136,9 @@ const BodyProduto = () => {
   useEffect(() => {
     if (isFirstRender) {
       setIsFirstRender(false);
-    } else {
+    } else if (user && produto) {
       const avaliacoes = user.avaliacoes;
+
       setTodasAvaliacoes(avaliacoes);
       avaliacoes.forEach((element) => {
         if (element.idProduto === produto.id) {

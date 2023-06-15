@@ -19,8 +19,8 @@ function ProdutoPage() {
     if (!user) {
       navigate("/");
     } else {
-      setLoading(false);
       getLivro();
+      setLoading(false);
     }
   }, [navigate]);
 

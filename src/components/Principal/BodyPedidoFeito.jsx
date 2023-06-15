@@ -113,7 +113,7 @@ const BodyPedidoFeito = ({ pedido }) => {
                 ----------------------------------------------------------------------------------------------
               </Texto>
             </div>
-            <Texto>Total: {pedido.valorTotal}</Texto>
+            <Texto>Total: {pedido.valorTotal.toFixed(2)}</Texto>
             <Texto style={{ fontSize: "15px" }}>
               *Não se preocupe, uma cópia desse comprovante será enviada para
               seu email: {user.email}
